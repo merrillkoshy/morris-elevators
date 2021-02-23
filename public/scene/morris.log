@@ -1,0 +1,142 @@
+Exporter version: 2.80.1, Blender version: 2.80 (sub 75)
+========= Conversion from Blender to Babylon.js =========
+	Scene settings used :
+		Inline textures     :  true
+		Material Type       :  PBR
+		Positions Precision :  4
+		Normals Precision   :  3
+		UVs Precision       :  3
+		Vert Color Precision:  3
+		Mat Weight Precision:  2
+		Keep Z-up r-handed  :  no
+	Python World class constructor completed
+	processing begun of mesh:  floor
+		processing begun of material:  brushed_metal
+			processing texture brushed_metal
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  261
+		num normals        :  261
+		num tangents       :  0
+		num uvs            :  522
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  152
+	processing begun of camera (UniversalCamera):  Camera
+	processing begun of mesh:  wallframe
+		processing begun of material:  brushed_metal
+		registered as also a user of material:  brushed_metal
+		num positions      :  1071
+		num normals        :  1071
+		num tangents       :  0
+		num uvs            :  2142
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  520
+	processing begun of mesh:  doorLeft
+		processing begun of material:  glass
+		num positions      :  62
+		num normals        :  62
+		num tangents       :  0
+		num uvs            :  124
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  24
+	processing begun of mesh:  doorRight
+		processing begun of material:  glass
+		registered as also a user of material:  glass
+		num positions      :  62
+		num normals        :  62
+		num tangents       :  0
+		num uvs            :  124
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  24
+	processing begun of mesh:  ceiling
+		processing begun of material:  brushed_metal
+		registered as also a user of material:  brushed_metal
+		num positions      :  44
+		num normals        :  44
+		num tangents       :  0
+		num uvs            :  88
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  20
+	processing begun of mesh:  walls
+		processing begun of material:  glass
+		registered as also a user of material:  glass
+		num positions      :  61
+		num normals        :  61
+		num tangents       :  0
+		num uvs            :  122
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  24
+	processing begun of mesh:  floor_tile
+		processing begun of material:  wood
+			processing texture wood
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  162
+		num normals        :  162
+		num tangents       :  0
+		num uvs            :  324
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  76
+	processing begun of mesh:  backside-frame
+		processing begun of material:  brushed_metal.001
+			processing texture brushed_metal
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  543
+		num normals        :  543
+		num tangents       :  0
+		num uvs            :  1086
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  264
+	processing begun of mesh:  backside-wall
+		processing begun of material:  wood.001
+			processing texture gold
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of mesh:  handrails
+		processing begun of material:  brushed_metal.002
+			processing texture brushed_metal
+				texture type:  diffuseTexture, mapped using: "UVMap"
+		num positions      :  928
+		num normals        :  928
+		num tangents       :  0
+		num uvs            :  1856
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  372
+	processing begun of mesh:  Mirror
+		processing begun of material:  Material.001
+		num positions      :  31
+		num normals        :  31
+		num tangents       :  0
+		num uvs            :  62
+		num uvs2           :  0
+		num colors         :  0
+		num triangles      :  12
+	processing begun of light (POINT):  Light
+========= Writing of JSON file started =========
+	writing mesh:  floor
+	writing mesh:  wallframe
+	writing mesh:  doorLeft
+	writing mesh:  doorRight
+	writing mesh:  ceiling
+	writing mesh:  walls
+	writing mesh:  floor_tile
+	writing mesh:  backside-frame
+	writing mesh:  backside-wall
+	writing mesh:  handrails
+	writing mesh:  Mirror
+========= Writing of JSON file completed =========
+========= end of processing =========
+elapsed time:  0 min, 0.2215 secs
