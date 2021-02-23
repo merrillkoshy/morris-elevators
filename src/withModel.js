@@ -40,25 +40,40 @@ const onModelLoaded = model => {
 };
 
 const WithModel = props => {
+  const [shaftview, setShaftView] = useState(<></>);
   const [elevatorSettings, updateElevatorSettings] = useState({
     elevatorYPos: -1.5,
     elevatorScaling: 3.0
   });
 
-  const moveAvocadoDown = () => {
+  const moveElevatorDown = () => {
     updateElevatorSettings(state => ({
       ...state,
       elevatorYPos: state.elevatorYPos - 0.5
     }));
   };
 
-  const moveAvocadoUp = () => {
+  const moveElevatorUp = () => {
     updateElevatorSettings(state => ({
       ...state,
       elevatorYPos: state.elevatorYPos + 0.5
     }));
   };
+  const activateShaftView = () => {
+    setShaftView(
+      <ScaledModelWithProgress
+        rootUrl={`scene/`}
+        sceneFilename="morris-shaft.glb"
+        scaleTo={13.5}
+        progressBarColor={Color3.FromInts(255, 165, 0)}
+        center={new Vector3(0, -1.5, 0)}
+      />
+    );
+  };
 
+  const deactivateShaftView = () => {
+    setShaftView(<></>);
+  };
   // const increaseAvocadoSize = () => {
   //   updateElevatorSettings((state) => ({
   //     ...state,
@@ -77,14 +92,18 @@ const WithModel = props => {
     <div>
       <div className="row">
         <div className="col-xs-3 col-lg-3 align-top">
-          Move Elevator:
-          <Button onClick={moveAvocadoUp}>
+          Move Elevator: &nbsp;&nbsp;
+          <Button onClick={moveElevatorUp}>
             <Octicon icon={ArrowUp} />
           </Button>
           &nbsp;&nbsp;
-          <Button onClick={moveAvocadoDown}>
+          <Button onClick={moveElevatorDown}>
             <Octicon icon={ArrowDown} />
           </Button>
+        </div>
+        <div className="col-xs-3 col-lg-3 align-top">
+          <Button onClick={activateShaftView}>Shaft View</Button>
+          <Button onClick={deactivateShaftView}>Car View</Button>
         </div>
       </div>
       <div className="row">
@@ -98,22 +117,28 @@ const WithModel = props => {
               <Skybox rootUrl={"textures/environment.dds"} />
               <arcRotateCamera
                 name="camera1"
+                allowUpsideDown={false}
+                cameraDirection={Vector3.Zero()}
+                ignoreParentScaling={true}
                 alpha={Math.PI / 2}
                 beta={Math.PI / 2}
                 radius={9.0}
                 target={Vector3.Zero()}
                 minZ={0.001}
+                pinchPrecision={0.00000001}
+                pinchToPanMaxDistance={0.0001}
+                zoomOnFactor={0.00001}
               />
               <hemisphericLight
                 name="light1"
                 intensity={0.7}
                 direction={Vector3.Up()}
               />
-
+              {shaftview}
               <ScaledModelWithProgress
                 rootUrl={`scene/`}
                 sceneFilename="morris.glb"
-                scaleTo={5}
+                scaleTo={3}
                 progressBarColor={Color3.FromInts(255, 165, 0)}
                 center={new Vector3(0, elevatorSettings.elevatorYPos, 0)}
                 onModelLoaded={onModelLoaded}
